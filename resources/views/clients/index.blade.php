@@ -3,6 +3,11 @@
 @section('content')
     <div class="flex flex-col gap-5">
         <h1 class="text-4xl font-bold">Listado de clientes</h1>
+
+        <div class="">
+            <a class="btn btn-blue" href="{{ route('clients.create') }}">Nuevo</a>
+        </div>
+
         <table class="table">
             <thead>
                 <tr>

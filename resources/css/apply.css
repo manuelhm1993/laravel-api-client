@@ -23,3 +23,7 @@ h1 {
 .btn-blue {
     @apply bg-blue-600 text-white hover:bg-blue-800;
 }
+
+.btn-gray {
+    @apply bg-gray-600 text-white hover:bg-gray-800;
+}
