@@ -1,0 +1,25 @@
+h1 {
+    /* Permite crear clases personalizadas aplicando estilos tailwind para no repetirlos */
+    @apply text-4xl font-bold;
+}
+
+/* Aplicar el estilo solo a los impares: odd = 2n+1 */
+.table tbody tr:nth-child(odd) {
+    @apply bg-gray-200;
+}
+
+.table th, .table td {
+    @apply border border-gray-400 px-4 py-2;
+}
+
+.table th {
+    @apply text-gray-800;
+}
+
+.btn {
+    @apply font-bold py-2 px-4 rounded cursor-pointer tracking-widest uppercase;
+}
+
+.btn-blue {
+    @apply bg-blue-600 text-white hover:bg-blue-800;
+}
