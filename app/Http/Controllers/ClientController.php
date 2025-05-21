@@ -35,4 +35,11 @@ class ClientController extends Controller
         
         return to_route('clients.index');
     }
+
+    public function destroy(int $id): RedirectResponse
+    {
+        Http::delete($this->url . "/clients/{$id}");
+        
+        return to_route('clients.index');
+    }
 }

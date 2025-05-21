@@ -27,3 +27,7 @@ h1 {
 .btn-gray {
     @apply bg-gray-600 text-white hover:bg-gray-800;
 }
+
+.btn-red {
+    @apply bg-red-600 text-white hover:bg-red-800;
+}

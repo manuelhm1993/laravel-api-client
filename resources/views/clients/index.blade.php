@@ -14,6 +14,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Address</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +25,14 @@
                         <td>{{ $client['name'] }}</td>
                         <td>{{ $client['email'] }}</td>
                         <td>{{ $client['phone'] }}</td>
+                        <td>{{ $client['address'] ?? 'Sin dirección' }}</td>
+                        <td>
+                            <form action="{{ route('clients.destroy', $client['id']) }}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-red">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
