@@ -26,12 +26,16 @@
                         <td>{{ $client['email'] }}</td>
                         <td>{{ $client['phone'] }}</td>
                         <td>{{ $client['address'] ?? 'Sin dirección' }}</td>
-                        <td>
-                            <form action="{{ route('clients.destroy', $client['id']) }}" method="post">
-                                @method('DELETE')
-                                @csrf
-                                <button type="submit" class="btn btn-red">Eliminar</button>
-                            </form>
+                        <td width="100">
+                            <div class="flex flex-row gap-4">
+                                <a href="{{ route('clients.edit', $client['id']) }}" class="btn-sm btn-success">Editar</a>
+
+                                <form action="{{ route('clients.destroy', $client['id']) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit" class="btn-sm btn-red">Eliminar</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

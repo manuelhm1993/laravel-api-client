@@ -20,6 +20,10 @@ h1 {
     @apply font-bold py-2 px-4 rounded cursor-pointer tracking-widest uppercase;
 }
 
+.btn-sm {
+    @apply font-medium px-3 py-2 rounded-lg text-xs text-center;
+}
+
 .btn-blue {
     @apply bg-blue-600 text-white hover:bg-blue-800;
 }
@@ -30,4 +34,12 @@ h1 {
 
 .btn-red {
     @apply bg-red-600 text-white hover:bg-red-800;
+}
+
+.btn-success {
+    @apply bg-green-600 text-white hover:bg-green-800;
+}
+
+.btn-sm-success {
+    @apply text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800;
 }

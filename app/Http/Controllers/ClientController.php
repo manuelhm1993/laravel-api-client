@@ -36,6 +36,20 @@ class ClientController extends Controller
         return to_route('clients.index');
     }
 
+    public function edit(int $id): View
+    {
+        $client = Http::get($this->url . "/clients/{$id}")->json();
+
+        return view('clients.edit', compact('client'));
+    }
+
+    public function update(Request $request, int $id): RedirectResponse
+    {
+        Http::put($this->url . "/clients/{$id}", $request->all());
+        
+        return to_route('clients.index');
+    }
+
     public function destroy(int $id): RedirectResponse
     {
         Http::delete($this->url . "/clients/{$id}");
